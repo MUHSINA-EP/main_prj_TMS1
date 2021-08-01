@@ -1,0 +1,56 @@
+<br>
+<br>
+
+<h2>Edit Trainer Details</h2>
+
+
+<div class="container">
+  <form (ngSubmit)="editTrainers(trainer)" >
+    <label for="inputEmail" class="form-label"> Email</label>
+    <input type="text" id="email"   class="form-control" name="email" #email="ngModel" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" [(ngModel)]="trainer.email" required  >
+    <br>
+
+    <label for="inputPhoneno" class="form-label">Phone No</label>
+    <input type="text" id="Pno" class="form-control" name="phone" pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" length="10" [(ngModel)]="trainer.phone" #phone="ngModel" required>
+    <br>
+
+    <label for="inputAddress" class="form-label">Address</label>
+    <input type="text" id="address" name="address" [(ngModel)]="trainer.address" minlength="12" #address="ngModel" required>
+    <br>
+
+    <label for="inputQualification" class="form-label">Highest Qualification</label>
+    <input type="text" id="lname" [(ngModel)]="trainer.qualification" #qualification="ngModel" minlength="2" required>
+
+    <label for="inputSkill" class="form-label">Skill Set</label>
+    <input type="text" id="skillset"  class="form-control" name="skillset" [(ngModel)]="trainer.skillset" #skillset="ngModel" required>
+    <br>
+
+    <label for="inputcompanyname" class="form-label">Current Company Name</label>
+    <input type="text" id="companyname" class="form-control" name="company" [(ngModel)]="trainer.company" #company="ngModel" required>
+    <br>
+
+    <label for="inputdesignation" class="form-label">Current designation</label>
+    <input type="text" id="desig" name="designation" [(ngModel)]="trainer.designation" #designation="ngModel" required>
+    <br>
+
+    <label for="inputCourses" class="form-label">ICTAK Course handling</label>
+    <ng-select  [items]="categories"  
+               bindLabel="name"  
+              type="text"  placeholder="Select Category" 
+               name="ictakcourses" 
+               appendTo="body"    
+               [multiple]="true"  
+               [(ngModel)]="trainer.ictakcourses"
+               #ictakcourses="ngModel"
+                required>  
+     </ng-select> 
+     <br>
+     <br>
+     <br>
+     
+     
+     <!--<input type="submit" value="Save"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+    <input type="submit" value="Submit">
+    
+  </form>
+</div>
