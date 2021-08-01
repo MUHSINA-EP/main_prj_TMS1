@@ -78,10 +78,7 @@ courses:any;
   RejectTrainer(id:any){
     return this.http.delete("http://localhost:3000/adminhome/requests/delete/"+id)
   }
-EditTrainer(trainer:any){
-  return this.http.put("http://localhost:3000/userhome/trainerprofile/edit",trainer)
-  
-}
+
    newAllocation(trainer : any)
   {
     const formData = new FormData();
@@ -101,6 +98,12 @@ EditTrainer(trainer:any){
     return this.http.get("http://localhost:3000/adminhome/allocation/"+id);
 
   };
+  
+   editTrainers(trainer:any){
+  console.log('editTrainers ');
+  return this.http.put("http://localhost:3000/adminhome/trainerprofiles/edit",trainer)
+  .subscribe(data =>{console.log(data)})
+  }
   
    deleteTrainer(id:any)
   {
