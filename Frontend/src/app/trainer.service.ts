@@ -116,12 +116,7 @@ courses:any;
     
   }
   
-  editTrainers(trainer:any)
-  {
   
-  return this.http.put("http://localhost:3000/adminhome/trainerprofiles/update/",trainer)
-  .subscribe(data =>{console.log(data)})
-  }
 
   
 }
