@@ -38,6 +38,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { TrainerprofilesComponent } from './trainerprofiles/trainerprofiles.component';
+import { EdittrainerComponent } from './edittrainer/edittrainer.component';
 
 
 
@@ -56,7 +57,9 @@ import { TrainerprofilesComponent } from './trainerprofiles/trainerprofiles.comp
     RequestComponent,
     TrainerProfileComponent,
      AllocationComponent,
-    TrainerprofilesComponent
+    TrainerprofilesComponent,
+    EdittrainerComponent
+    
    
   ],
   imports: [
