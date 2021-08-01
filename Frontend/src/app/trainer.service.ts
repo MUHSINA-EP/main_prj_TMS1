@@ -116,8 +116,9 @@ courses:any;
     
   }
   
-  editTrainers(trainer:any){
-  console.log('editTrainers ');
+  editTrainers(trainer:any)
+  {
+  console.log('editTrainers');
   return this.http.put("http://localhost:3000/adminhome/trainerprofiles/edit",trainer)
   .subscribe(data =>{console.log(data)})
   }
