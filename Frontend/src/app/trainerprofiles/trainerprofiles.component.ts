@@ -68,10 +68,10 @@ export class TrainerprofilesComponent implements OnInit {
     alert("Trainer deleted");
   }
 
-  editTrainer(trainer:any)
+  editTrainers(trainer:any)
   {
     localStorage.setItem("editTrainerId", trainer._id.toString());
-    this.router.navigate(['update']);
+    this.router.navigate(['edit']);
 
   }
     
